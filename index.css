@@ -533,7 +533,7 @@ body:not(.user-is-tabbing) a:focus {
         }
         .skill-header{
             margin-top: -1rem;
-            padding: 3px;
+            margin-left: 2rem;
         }
         .skill-list{
             display: flex;
