@@ -15,7 +15,7 @@ const config: Config = {
         jost: ["var(--font-jost)", "sans-serif"],
       },
       fontSize: {
-        huge: "clamp(4.5rem, 13vw, 11rem)",
+        huge: "clamp(2.25rem, 11vw, 11rem)",
       },
     },
   },

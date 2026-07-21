@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { skills } from "@/lib/data";
+import { asset } from "@/lib/asset";
 import SectionHeading from "./SectionHeading";
 
 export default function Skills() {
@@ -20,7 +21,7 @@ export default function Skills() {
               transition={{ duration: 0.4, delay: (i % 5) * 0.05 }}
               className="flex flex-col items-center transition-transform hover:scale-110"
             >
-              <img src={skill.icon} alt={`${skill.name} icon`} className="mb-3 h-16 w-16" />
+              <img src={asset(skill.icon)} alt={`${skill.name} icon`} className="mb-3 h-16 w-16" />
               <span className="text-lg text-cream">{skill.name}</span>
             </motion.div>
           ))}

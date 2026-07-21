@@ -1,4 +1,5 @@
 import { socialLinks } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           {socialLinks.map((social) => (
             <li key={social.name}>
               <a href={social.url} title={`Link to ${social.name} profile`} target="_blank" rel="noreferrer">
-                <img src={social.icon} alt={social.name} className="h-8 invert transition-transform hover:scale-110" />
+                <img src={asset(social.icon)} alt={social.name} className="h-8 invert transition-transform hover:scale-110" />
               </a>
             </li>
           ))}

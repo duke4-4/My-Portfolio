@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 import SectionHeading from "./SectionHeading";
 
 export default function About() {
@@ -25,7 +26,7 @@ export default function About() {
               are sure to find me at the gym or logged onto EA playing FIFA.
             </p>
             <a
-              href="/Duke-Resume.pdf"
+              href={asset("/Duke-Resume.pdf")}
               target="_blank"
               rel="noreferrer"
               className="relative mt-6 inline-block border border-pink px-10 py-3 transition-colors hover:bg-pink"
@@ -42,7 +43,7 @@ export default function About() {
             className="md:flex-1"
           >
             <img
-              src="/images/duke-profile.jpg"
+              src={asset("/images/duke-profile.jpg")}
               alt="Tashinga Duke Chizengwe"
               className="mx-auto max-w-sm rounded-sm border border-white/10 grayscale md:mx-0 md:ml-auto"
             />

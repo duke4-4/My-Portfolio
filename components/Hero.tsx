@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Nav from "./Nav";
 import { socialLinks } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export default function Hero() {
   return (
@@ -28,13 +29,19 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="pointer-events-none absolute z-10 flex h-[65vh] max-w-[45vw] items-end justify-center sm:h-[75vh]"
+            className="pointer-events-none absolute z-10 h-[60vh] w-[34vh] overflow-hidden sm:h-[68vh] sm:w-[38vh]"
+            style={{
+              maskImage:
+                "radial-gradient(ellipse 58% 64% at 50% 42%, black 35%, transparent 95%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 58% 64% at 50% 42%, black 35%, transparent 95%)",
+            }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/duke-profile.jpg"
+              src={asset("/images/duke-profile.jpg")}
               alt="Tashinga Duke Chizengwe"
-              className="h-full w-auto object-contain object-bottom grayscale"
+              className="h-full w-full object-cover object-top grayscale contrast-125 brightness-90"
             />
           </motion.div>
         </div>
@@ -60,7 +67,7 @@ export default function Hero() {
                 rel="noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition-colors hover:border-pink"
               >
-                <img src={social.icon} alt={social.name} className="h-4 w-4 invert" />
+                <img src={asset(social.icon)} alt={social.name} className="h-4 w-4 invert" />
               </a>
             ))}
           </div>

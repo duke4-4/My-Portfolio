@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
+import { asset } from "@/lib/asset";
 import SectionHeading from "./SectionHeading";
 
 export default function Work() {
@@ -49,7 +50,7 @@ export default function Work() {
                       title="View Source Code"
                       className="transition-transform hover:scale-110"
                     >
-                      <img src="/images/github.svg" alt="GitHub" className="h-7 invert" />
+                      <img src={asset("/images/github.svg")} alt="GitHub" className="h-7 invert" />
                     </a>
                   )}
                 </div>
@@ -57,7 +58,7 @@ export default function Work() {
 
               <div className="md:flex-1">
                 <img
-                  src={project.image}
+                  src={asset(project.image)}
                   alt={project.title}
                   className="w-full rounded-sm border border-white/10"
                 />
