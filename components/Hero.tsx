@@ -29,7 +29,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="pointer-events-none absolute z-10 h-[60vh] w-[34vh] overflow-hidden sm:h-[68vh] sm:w-[38vh]"
+            className="pointer-events-none absolute z-10 h-[40vh] w-[26vh] overflow-hidden sm:h-[60vh] sm:w-[34vh] md:h-[68vh] md:w-[38vh]"
             style={{
               maskImage:
                 "radial-gradient(ellipse 58% 64% at 50% 42%, black 35%, transparent 95%)",
